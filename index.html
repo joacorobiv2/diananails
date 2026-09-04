@@ -1,1 +1,1453 @@
 
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROSÉ GARDEN — Nail Architecture & Sculptură 3D | Braunau am Inn</title>
+  
+  <!-- Google Fonts: Syne & Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peony: {
+              DEFAULT: '#FF2E93', // Rozul neon vibrant din Stitch
+              glow: '#FF4FA7',
+              dark: '#C81067',
+              muted: 'rgba(255, 46, 147, 0.15)'
+            },
+            gold: {
+              DEFAULT: '#E5C07B', // Aur cald editorial
+              light: '#F3DB9E',
+              dark: '#9E7A32',
+              muted: 'rgba(229, 192, 123, 0.12)'
+            },
+            dark: {
+              950: '#080709',
+              900: '#0E0D11',
+              850: '#141318',
+              800: '#1B1A22',
+              700: '#282633',
+              card: '#15141A'
+            }
+          },
+          fontFamily: {
+            headline: ['Syne', 'sans-serif'],
+            display: ['Cinzel', 'serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Textură subtilă de fundal pentru vibrație editorială */
+    .bg-noise {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+
+    .brush-title {
+      text-shadow: 0 0 28px rgba(255, 46, 147, 0.45);
+      letter-spacing: -0.04em;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080709;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #282633;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF2E93;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .glass-panel {
+      background: rgba(21, 20, 26, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-dark-950 text-neutral-200 font-body antialiased selection:bg-peony selection:text-white relative overflow-x-hidden">
+  <div class="fixed inset-0 bg-noise pointer-events-none z-50"></div>
+
+  <!-- LUMINI DE AMBIANȚĂ -->
+  <div class="fixed top-[-10%] right-[-10%] w-[600px] h-[600px] bg-peony/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
+  <div class="fixed top-[40%] left-[-15%] w-[500px] h-[500px] bg-gold/5 rounded-full blur-[160px] pointer-events-none z-0"></div>
+  <div class="fixed bottom-[-10%] right-[10%] w-[550px] h-[550px] bg-peony/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+  <!-- BARA DE SUS (ANUNȚ ATELIER) -->
+  <aside aria-label="Anunț Salon" class="relative z-40 bg-dark-900/90 border-b border-white/5 py-1.5 px-4 text-xs tracking-widest text-center text-neutral-400 uppercase font-medium flex items-center justify-center gap-3">
+    <span class="inline-block w-1.5 h-1.5 rounded-full bg-peony animate-ping"></span>
+    <span data-i18n="announcement">Braunau am Inn, Austria • Atelier Privat & Sculptură Gel High-End</span>
+    <span class="hidden md:inline text-gold">• Sesiuni Exclusive 1-la-1</span>
+  </aside>
+
+  <!-- BARA DE NAVIGARE -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-8 h-8 rounded-full border border-peony flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
+          <span class="text-peony text-xs font-display font-bold tracking-tighter">RG</span>
+          <div class="absolute inset-0 bg-peony/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline font-black tracking-widest text-lg sm:text-xl text-white group-hover:text-peony transition-colors">
+            ROSÉ GARDEN
+          </span>
+          <span class="text-[9px] uppercase tracking-[0.3em] text-gold font-medium -mt-1">Nail Architecture</span>
+        </div>
+      </a>
+
+      <!-- Link-uri Navigare Desktop -->
+      <nav class="hidden md:flex items-center space-x-9 text-xs uppercase tracking-[0.2em] font-semibold text-neutral-300">
+        <a href="#lookbook" class="hover:text-peony transition-colors py-1" data-i18n="nav.lookbook">Lookbook</a>
+        <a href="#artist" class="hover:text-peony transition-colors py-1" data-i18n="nav.artist">Maestra Detaliului</a>
+        <a href="#services" class="hover:text-peony transition-colors py-1" data-i18n="nav.services">Servicii</a>
+        <a href="#philosophy" class="hover:text-peony transition-colors py-1" data-i18n="nav.philosophy">Atelier</a>
+        <a href="#contact" class="hover:text-peony transition-colors py-1" data-i18n="nav.location">Locație</a>
+      </nav>
+
+      <!-- Butoane Limbă & Programare Rapidă -->
+      <div class="flex items-center gap-4">
+        <!-- Switcher RO / DE -->
+        <div class="flex items-center bg-dark-850 p-0.5 rounded-full border border-white/10 text-[11px] font-semibold tracking-wider">
+          <button id="lang-ro" class="px-2.5 py-1 rounded-full bg-peony text-white transition-all">RO</button>
+          <button id="lang-de" class="px-2.5 py-1 rounded-full text-neutral-400 hover:text-white transition-all">DE</button>
+        </div>
+
+        <a href="#booking" class="hidden sm:inline-flex items-center gap-2 bg-peony hover:bg-peony-glow text-white text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-full shadow-[0_0_20px_rgba(255,46,147,0.35)] hover:shadow-[0_0_25px_rgba(255,46,147,0.6)] transition-all">
+          <span data-i18n="nav.book">Programează-te</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+
+        <!-- Meniu Mobil -->
+        <button id="mobile-toggle" aria-label="Meniu" class="md:hidden text-white p-2 hover:text-peony transition-colors">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Meniu Dropdown Mobil -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-dark-900/95 px-6 py-6 space-y-4 backdrop-blur-xl">
+      <a href="#lookbook" class="block text-sm uppercase tracking-widest text-neutral-300 hover:text-peony py-1" data-i18n="nav.lookbook">Lookbook</a>
+      <a href="#artist" class="block text-sm uppercase tracking-widest text-neutral-300 hover:text-peony py-1" data-i18n="nav.artist">Maestra Detaliului</a>
+      <a href="#services" class="block text-sm uppercase tracking-widest text-neutral-300 hover:text-peony py-1" data-i18n="nav.services">Servicii & Tarife</a>
+      <a href="#philosophy" class="block text-sm uppercase tracking-widest text-neutral-300 hover:text-peony py-1" data-i18n="nav.philosophy">Atelierul Nostru</a>
+      <a href="#contact" class="block text-sm uppercase tracking-widest text-neutral-300 hover:text-peony py-1" data-i18n="nav.location">Locație Braunau</a>
+      <div class="pt-3">
+        <a href="#booking" class="w-full inline-flex justify-center items-center gap-2 bg-peony text-white text-xs font-bold uppercase tracking-widest px-5 py-3 rounded-full">
+          <span data-i18n="nav.book">Programează-te Acum</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECȚIUNEA 1: HERO -->
+  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden border-b border-white/10 pt-8 pb-16">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-r from-dark-950 via-dark-950/85 to-transparent z-10"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-dark-950/70 z-10"></div>
+      <img 
+        id="hero-img"
+        src="./hero-nail-art.jpg" 
+        alt="Nail Art Sculpture Haute Couture" 
+        class="w-full h-full object-cover object-right-top md:object-center opacity-65 transform scale-105 filter contrast-125 transition-all duration-700"
+      />
+    </div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-2xl lg:max-w-3xl">
+        <div class="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6">
+          <span class="w-2 h-2 rounded-full bg-peony animate-ping"></span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-bold text-neutral-300" data-i18n="hero.tagline">
+            ARTĂ PE UNGHIILE TALE.
+          </span>
+        </div>
+
+        <h1 class="font-headline text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase text-peony tracking-tight brush-title leading-[0.88] mb-6">
+          <span data-i18n="hero.title">FĂRĂ REGULI.</span>
+        </h1>
+
+        <p class="text-neutral-300 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-8 max-w-xl text-neutral-200/90" data-i18n="hero.subtext">
+          Sculptură în gel, aur lichid, detalii 3D. Descoperă manichiura ta statement în Braunau am Inn.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+          <a href="#booking" class="relative group inline-flex items-center justify-center px-9 py-4 rounded-full bg-peony text-white font-headline text-xs sm:text-sm font-black uppercase tracking-[0.18em] shadow-[0_0_35px_rgba(255,46,147,0.55)] hover:bg-peony-glow transform hover:scale-105 transition-all">
+            <span data-i18n="hero.cta">PROGRAMEAZĂ-TE ACUM</span>
+            <i data-lucide="sparkles" class="w-4 h-4 ml-2 text-gold animate-bounce"></i>
+          </a>
+
+          <a href="#lookbook" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-gold hover:text-white font-semibold py-3 px-2 transition-colors">
+            <span data-i18n="hero.explore">Explorează Lookbook-ul</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-gold"></i>
+          </a>
+        </div>
+
+        <div class="mt-14 pt-8 border-t border-white/10 grid grid-cols-3 gap-6 max-w-md">
+          <div>
+            <span class="block font-headline text-2xl md:text-3xl font-bold text-white">100%</span>
+            <span class="text-[10px] uppercase tracking-wider text-neutral-400" data-i18n="hero.stat1">Sculptat Manual</span>
+          </div>
+          <div>
+            <span class="block font-headline text-2xl md:text-3xl font-bold text-gold">3D</span>
+            <span class="text-[10px] uppercase tracking-wider text-neutral-400" data-i18n="hero.stat2">Chrome & Aur</span>
+          </div>
+          <div>
+            <span class="block font-headline text-2xl md:text-3xl font-bold text-peony">4-6</span>
+            <span class="text-[10px] uppercase tracking-wider text-neutral-400" data-i18n="hero.stat3">Săptămâni Rezistență</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDĂ DERULANTĂ MARQUEE -->
+  <div class="bg-peony py-3 overflow-hidden whitespace-nowrap border-y border-peony-dark select-none shadow-lg">
+    <div class="inline-block animate-[marquee_24s_linear_infinite] uppercase font-headline font-black text-xs sm:text-sm tracking-[0.3em] text-dark-950">
+      ROSÉ GARDEN ATELIER &bull; AUR LICHID &bull; 3D FLORA &bull; SCULPTURĂ ARHITECTURALĂ &bull; ZERO COMPROMISURI &bull; BRAUNAU AM INN &bull; FĂRĂ REGULI &bull; KEINE REGELN &bull; STATEMENT NAILS &bull;
+    </div>
+    <div class="inline-block animate-[marquee_24s_linear_infinite] uppercase font-headline font-black text-xs sm:text-sm tracking-[0.3em] text-dark-950">
+      ROSÉ GARDEN ATELIER &bull; AUR LICHID &bull; 3D FLORA &bull; SCULPTURĂ ARHITECTURALĂ &bull; ZERO COMPROMISURI &bull; BRAUNAU AM INN &bull; FĂRĂ REGULI &bull; KEINE REGELN &bull; STATEMENT NAILS &bull;
+    </div>
+  </div>
+
+  <style>
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+
+  <!-- SECȚIUNEA 2: THE LOOKBOOK -->
+  <section id="lookbook" class="py-24 relative bg-dark-900 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-black uppercase text-peony tracking-tight" data-i18n="lookbook.title">
+            THE LOOKBOOK
+          </h2>
+          <p class="text-gold font-medium tracking-wide mt-2 text-sm sm:text-base" data-i18n="lookbook.subtitle">
+            Perfecțiune macro. Explorează fiecare detaliu.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 mt-6 md:mt-0">
+          <div class="text-xs text-neutral-400 mr-2 tracking-widest hidden sm:inline" data-i18n="lookbook.swipe">
+            GLISEAZĂ PENTRU DETALII
+          </div>
+          <button id="lb-prev" aria-label="Înapoi" class="w-10 h-10 rounded-lg border border-gold/40 text-gold hover:border-gold hover:bg-gold/10 flex items-center justify-center transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </button>
+          <button id="lb-next" aria-label="Înainte" class="w-10 h-10 rounded-lg border border-gold/40 text-gold hover:border-gold hover:bg-gold/10 flex items-center justify-center transition-colors">
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filtre Creații -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 hide-scrollbar">
+        <button class="filter-btn active px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider bg-peony text-white" data-filter="all" data-i18n="filter.all">Toate Creațiile</button>
+        <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider bg-dark-800 text-neutral-300 hover:text-white border border-white/5" data-filter="3d" data-i18n="filter.3d">3D Botanical</button>
+        <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider bg-dark-800 text-neutral-300 hover:text-white border border-white/5" data-filter="chrome" data-i18n="filter.chrome">Liquid Metal Chrome</button>
+        <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider bg-dark-800 text-neutral-300 hover:text-white border border-white/5" data-filter="stiletto" data-i18n="filter.stiletto">Stiletto Architecture</button>
+      </div>
+
+      <!-- Galerie Orizontală Lookbook -->
+      <div id="lookbook-carousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-2 hide-scrollbar scroll-smooth">
+        <!-- Card 1 -->
+        <div class="lookbook-card snap-start flex-shrink-0 w-[290px] sm:w-[350px] md:w-[380px] rounded-2xl overflow-hidden glass-panel border border-white/10 group relative" data-category="3d">
+          <div class="relative h-[440px] overflow-hidden">
+            <img 
+              id="lb-img-1"
+              src="./lookbook-1.jpg" 
+              alt="3D Botanical Sculpting" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent"></div>
+            <div class="absolute bottom-16 left-5 right-5 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded bg-[#2D4522]/90 border border-[#4B6B38] text-[10px] font-bold text-[#A7DF82] tracking-wider">#botanicalspring</span>
+              <span class="px-2.5 py-1 rounded bg-[#2D4522]/90 border border-[#4B6B38] text-[10px] font-bold text-[#A7DF82] tracking-wider">#3dchromegel</span>
+            </div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <h3 class="font-headline text-xl sm:text-2xl font-bold text-white group-hover:text-peony transition-colors" data-i18n="card1.title">
+                3D Botanical Sculpting
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="lookbook-card snap-start flex-shrink-0 w-[290px] sm:w-[350px] md:w-[380px] rounded-2xl overflow-hidden glass-panel border border-white/10 group relative" data-category="chrome">
+          <div class="relative h-[440px] overflow-hidden">
+            <img 
+              id="lb-img-2"
+              src="./lookbook-2.jpg" 
+              alt="Liquid Metal Flora" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent"></div>
+            <div class="absolute bottom-16 left-5 right-5 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded bg-[#332A15]/90 border border-[#6E5A26] text-[10px] font-bold text-[#E5C07B] tracking-wider">#liquidchrome</span>
+              <span class="px-2.5 py-1 rounded bg-[#332A15]/90 border border-[#6E5A26] text-[10px] font-bold text-[#E5C07B] tracking-wider">#metalframecut</span>
+            </div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <h3 class="font-headline text-xl sm:text-2xl font-bold text-white group-hover:text-peony transition-colors" data-i18n="card2.title">
+                Liquid Metal Flora
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="lookbook-card snap-start flex-shrink-0 w-[290px] sm:w-[350px] md:w-[380px] rounded-2xl overflow-hidden glass-panel border border-white/10 group relative" data-category="stiletto">
+          <div class="relative h-[440px] overflow-hidden">
+            <img 
+              id="lb-img-3"
+              src="./lookbook-3.jpg" 
+              alt="Molten Gothic Baroque" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent"></div>
+            <div class="absolute bottom-16 left-5 right-5 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded bg-peony/20 border border-peony/50 text-[10px] font-bold text-peony tracking-wider">#24kgolddrip</span>
+              <span class="px-2.5 py-1 rounded bg-white/10 border border-white/20 text-[10px] font-bold text-neutral-200 tracking-wider">#stilettoshape</span>
+            </div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <h3 class="font-headline text-xl sm:text-2xl font-bold text-white group-hover:text-peony transition-colors" data-i18n="card3.title">
+                Molten Gothic Baroque
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="lookbook-card snap-start flex-shrink-0 w-[290px] sm:w-[350px] md:w-[380px] rounded-2xl overflow-hidden glass-panel border border-white/10 group relative" data-category="chrome">
+          <div class="relative h-[440px] overflow-hidden">
+            <img 
+              id="lb-img-4"
+              src="./lookbook-4.jpg" 
+              alt="Negative Space Chrome" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent"></div>
+            <div class="absolute bottom-16 left-5 right-5 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded bg-dark-700/80 border border-white/10 text-[10px] font-bold text-neutral-300 tracking-wider">#negativespace</span>
+              <span class="px-2.5 py-1 rounded bg-peony/20 border border-peony/50 text-[10px] font-bold text-peony tracking-wider">#cybernoir</span>
+            </div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <h3 class="font-headline text-xl sm:text-2xl font-bold text-white group-hover:text-peony transition-colors" data-i18n="card4.title">
+                Onyx & Cyber Minimal
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner cu Butonul pentru Design Personalizat (Deschide Popup-ul cu Numărul de Telefon) -->
+      <div class="mt-10 p-6 sm:p-8 rounded-3xl bg-dark-850 border border-gold/20 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center flex-shrink-0 text-gold">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-headline text-lg font-bold text-white" data-i18n="lookbook.custom_quote">Personalizează-ți Viziunea</h4>
+            <p class="text-xs sm:text-sm text-neutral-400 mt-1" data-i18n="lookbook.custom_desc">Fiecare set este sculptat exclusiv manual. Vorbește direct cu Diana despre modelul tău de vis.</p>
+          </div>
+        </div>
+
+        <!-- Butonul ce deschide popup-ul -->
+        <button 
+          id="btn-custom-design" 
+          type="button" 
+          class="w-full md:w-auto px-7 py-3.5 rounded-full bg-gold hover:bg-gold-light text-dark-950 font-headline font-bold text-xs uppercase tracking-wider transition-all transform hover:scale-105 shadow-[0_0_25px_rgba(229,192,123,0.3)] flex items-center justify-center gap-2 flex-shrink-0 cursor-pointer"
+        >
+          <span data-i18n="lookbook.custom_btn">Cere Design Personalizat</span>
+          <i data-lucide="phone" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECȚIUNEA 3: MAESTRA DETALIULUI (1 SINGUR ARTIST) -->
+  <section id="artist" class="py-24 relative bg-dark-950 border-b border-white/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="mb-14">
+        <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-black uppercase text-peony tracking-tight" data-i18n="artist.title">
+          MAESTRA DETALIULUI
+        </h2>
+        <p class="text-gold font-medium tracking-wide mt-2 text-sm sm:text-base uppercase tracking-widest" data-i18n="artist.subtitle">
+          Sculptoriță de unghii, nu simplă manichiuristă.
+        </p>
+      </div>
+
+      <!-- Cardul Editorial al Dianei -->
+      <div class="relative bg-dark-card rounded-3xl p-6 sm:p-10 lg:p-12 border border-white/10 hover:border-peony/40 transition-all overflow-hidden group shadow-2xl">
+        
+        <!-- Număr grafic de fundal -->
+        <span class="absolute -top-10 right-4 font-headline text-[13rem] lg:text-[18rem] font-black text-white/[0.03] pointer-events-none select-none">
+          01
+        </span>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Poză Portret Artist (artistportrait.jpg) -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="relative w-full max-w-sm sm:max-w-md h-[400px] sm:h-[460px] rounded-3xl overflow-hidden border border-peony/30 shadow-[0_0_35px_rgba(255,46,147,0.2)] group-hover:shadow-[0_0_50px_rgba(255,46,147,0.35)] transition-all duration-500">
+              <img 
+                id="artist-portrait-img"
+                src="artistportrait.jpg" 
+                alt="Diana — Master Nail Artist" 
+                class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition-all duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent"></div>
+              
+              <div class="absolute top-4 left-4 bg-peony text-white px-3 py-1 rounded-full text-[10px] font-headline font-black uppercase tracking-widest shadow-lg">
+                Founder & Lead Architect
+              </div>
+
+              <div class="absolute bottom-4 left-5 right-5">
+                <span class="artist-display-name font-headline text-3xl font-black text-white tracking-tight">DIANA</span>
+                <span class="artist-display-role block text-xs uppercase tracking-wider text-gold font-semibold">Haute Nail Architecture</span>
+              </div>
+            </div>
+
+            <!-- Miniaturi detalii tehnice sub portret -->
+            <div class="w-full max-w-sm sm:max-w-md mt-4 flex items-center justify-between gap-3 bg-dark-850/80 p-2.5 rounded-2xl border border-white/5">
+              <div class="flex items-center gap-2">
+                <img id="artist-thumb-1" src="./lookbook-1.jpg" alt="Detaliu 1" class="w-12 h-12 rounded-xl object-cover border border-white/10">
+                <img id="artist-thumb-2" src="./lookbook-2.jpg" alt="Detaliu 2" class="w-12 h-12 rounded-xl object-cover border border-white/10">
+              </div>
+              <div class="text-right">
+                <span class="block text-xs font-bold text-white" data-i18n="artist.precision_stat">Micro-Detalii 0.05mm</span>
+                <span class="block text-[10px] text-neutral-400" data-i18n="artist.precision_sub">Pigmenți Japonezi & 24K</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Informații, Filozofie și Citate -->
+          <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-peony/10 border border-peony/30 text-peony text-xs font-bold uppercase tracking-wider mb-3">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                <span data-i18n="artist.badge_atelier">Atelier Exclusiv Braunau am Inn</span>
+              </div>
+              
+              <h3 class="artist-display-name font-headline text-4xl sm:text-5xl font-black text-peony tracking-tight">
+                DIANA
+              </h3>
+              <p class="artist-display-role text-sm sm:text-base uppercase tracking-wider text-gold font-semibold mt-1" data-i18n="artist.role">
+                Specialistă în redefinirea formei, sculptură 3D & micropictură
+              </p>
+
+              <blockquote class="artist-display-quote mt-6 text-base sm:text-lg text-neutral-200 leading-relaxed italic border-l-2 border-peony pl-5 py-1" data-i18n="artist.quote">
+                "O unghie nu este un canvas plat, este o structură arhitecturală ce necesită echilibru perfect între rezistență și grație. Fără șabloane monotone — fiecare set spune o poveste unică."
+              </blockquote>
+
+              <p class="text-xs sm:text-sm text-neutral-400 mt-4 leading-relaxed" data-i18n="artist.story">
+                Fiecare set creat în atelierul Rosé Garden este rezultatul anilor de pasiune și perfecționare în tehnici avansate. De la apex milimetric la pictură manuală fină și accente de aur lichid, fiecare întâlnire este o experiență 100% individualizată.
+              </p>
+            </div>
+
+            <!-- Realizări -->
+            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/10">
+              <div>
+                <span class="block font-headline text-2xl font-black text-white">8+</span>
+                <span class="text-[11px] uppercase tracking-wider text-neutral-400" data-i18n="artist.stat_exp">Ani de Măiestrie</span>
+              </div>
+              <div>
+                <span class="block font-headline text-2xl font-black text-gold">4,500+</span>
+                <span class="text-[11px] uppercase tracking-wider text-neutral-400" data-i18n="artist.stat_sets">Seturi Realizate</span>
+              </div>
+              <div>
+                <span class="block font-headline text-2xl font-black text-peony">100%</span>
+                <span class="text-[11px] uppercase tracking-wider text-neutral-400" data-i18n="artist.stat_solo">Sesiuni Private 1-la-1</span>
+              </div>
+            </div>
+
+            <!-- Butoane de acțiune -->
+            <div class="pt-2 flex flex-wrap items-center gap-4">
+              <a href="#booking" class="px-8 py-3.5 rounded-full bg-peony hover:bg-peony-glow text-white font-headline text-xs font-black uppercase tracking-widest shadow-[0_0_25px_rgba(255,46,147,0.4)] transition-all">
+                <span data-i18n="artist.btn_book">Programează o Sesiune</span>
+              </a>
+              <a href="#lookbook" class="px-6 py-3.5 rounded-full border border-white/20 hover:border-gold text-neutral-300 hover:text-white text-xs uppercase tracking-wider font-semibold transition-colors">
+                <span data-i18n="artist.btn_portfolio">Vezi Modelele</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BANNERUL ATELIERULUI (banner.jpg) -->
+      <div id="philosophy" class="mt-16 rounded-3xl overflow-hidden glass-panel border border-white/10 p-8 sm:p-12 relative shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-peony text-xs font-headline uppercase tracking-[0.25em] font-bold" data-i18n="craft.eyebrow">
+              FILOSOFIA ATELIERULUI BRAUNAU
+            </span>
+            <h3 class="font-headline text-2xl sm:text-4xl font-extrabold text-white leading-tight" data-i18n="craft.title">
+              Niciun șablon industrial. Fiecare linie este sculptură pură.
+            </h3>
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed" data-i18n="craft.body">
+              Folosim pigmenți organici japonezi, cristale autentice, foiță fină de aur și geluri polimerice de înaltă rezistență. În atelierul nostru din Braunau am Inn, timpul este dedicat exclusiv ție, pentru manichiuri ce rezistă impecabil săptămâni întregi.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <div class="flex items-center gap-2 text-xs font-semibold text-neutral-300">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-peony"></i>
+                <span data-i18n="craft.feat1">Sterilizare Medicală Clasa B</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-semibold text-neutral-300">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-gold"></i>
+                <span data-i18n="craft.feat2">Gel Hipoalergenic Certificat UE</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-semibold text-neutral-300">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-peony"></i>
+                <span data-i18n="craft.feat3">Garanție de Structură 21 Zile</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Poză Banner Workstation (banner.jpg) -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl group">
+              <img 
+                id="atelier-banner-img"
+                src="banner.jpg" 
+                alt="Atelier Rosé Garden — Masă de lucru & sculptură nail art" 
+                class="w-full h-64 sm:h-80 object-cover filter brightness-95 group-hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-xs font-mono text-neutral-300 tracking-wider flex items-center justify-between">
+                <span>// ATELIER • BRAUNAU AM INN</span>
+                <span class="text-peony text-[10px] uppercase font-bold tracking-widest">Macro Art</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECȚIUNEA 4: SERVICII & TARIFE -->
+  <section id="services" class="py-24 relative bg-dark-900 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-peony text-xs font-headline uppercase tracking-[0.25em] font-bold" data-i18n="services.tag">
+          MENIU SERVICII & INVESTIȚIE
+        </span>
+        <h2 class="font-headline text-3xl sm:text-5xl font-black uppercase text-white tracking-tight mt-2" data-i18n="services.title">
+          ARHITECTURĂ & DESIGN
+        </h2>
+        <p class="text-neutral-400 text-sm sm:text-base mt-3" data-i18n="services.sub">
+          Transparență totală. Fiecare serviciu include curățare dry manicure de mare precizie și top coat anti-zgârieturi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Serviciul 1 -->
+        <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-peony/50 transition-all group relative flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs uppercase tracking-widest text-gold font-bold">Signature Form</span>
+              <span class="font-headline text-2xl font-black text-white">€75</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-white group-hover:text-peony transition-colors" data-i18n="s1.title">
+              Construcție Gel Arhitectural
+            </h3>
+            <p class="text-xs text-neutral-400 mt-2 leading-relaxed" data-i18n="s1.desc">
+              Prelungire pe șablon, apex milimetric și rezistență maximă. Include forma dorită (Stiletto, Coffin, Almond rusesc).
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-neutral-400">
+            <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-peony"></i> 110 min</span>
+            <a href="#booking" class="text-peony hover:text-white font-bold uppercase tracking-wider flex items-center gap-1" data-i18n="services.select">Alege <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- Serviciul 2 (Piesa de Rezistență) -->
+        <div class="bg-gradient-to-b from-peony/20 to-dark-card p-7 rounded-3xl border border-peony/40 hover:border-peony transition-all group relative flex flex-col justify-between shadow-[0_0_30px_rgba(255,46,147,0.15)]">
+          <div class="absolute -top-3 right-6 bg-peony text-white text-[10px] font-bold uppercase tracking-widest px-3 py-0.5 rounded-full shadow-md">
+            Cel Mai Căutat
+          </div>
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs uppercase tracking-widest text-white font-bold">Haute Couture</span>
+              <span class="font-headline text-2xl font-black text-peony">€115</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-white group-hover:text-peony transition-colors" data-i18n="s2.title">
+              3D Liquid Gold & Sculptură Florală
+            </h3>
+            <p class="text-xs text-neutral-300 mt-2 leading-relaxed" data-i18n="s2.desc">
+              Semnătura Rosé Garden: petale reliefate lucrate manual, picături de aur lichid și reflexii cromatice spectaculoase.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-neutral-300">
+            <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-peony"></i> 140 min</span>
+            <a href="#booking" class="text-white hover:text-peony font-bold uppercase tracking-wider flex items-center gap-1" data-i18n="services.select">Alege <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- Serviciul 3 -->
+        <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-gold/50 transition-all group relative flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs uppercase tracking-widest text-gold font-bold">Chrome Noir</span>
+              <span class="font-headline text-2xl font-black text-white">€85</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-white group-hover:text-gold transition-colors" data-i18n="s3.title">
+              Liquid Mirror Chrome & Negative Space
+            </h3>
+            <p class="text-xs text-neutral-400 mt-2 leading-relaxed" data-i18n="s3.desc">
+              Oglindă lichidă argintie sau aurie pe bază mată, detalii geometrice precise și micropictură fină.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-neutral-400">
+            <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-gold"></i> 90 min</span>
+            <a href="#booking" class="text-gold hover:text-white font-bold uppercase tracking-wider flex items-center gap-1" data-i18n="services.select">Alege <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- Serviciul 4 -->
+        <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-peony/50 transition-all group relative flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs uppercase tracking-widest text-gold font-bold">Care & Refill</span>
+              <span class="font-headline text-2xl font-black text-white">€55</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-white group-hover:text-peony transition-colors" data-i18n="s4.title">
+              Întreținere Arhitectură Gel
+            </h3>
+            <p class="text-xs text-neutral-400 mt-2 leading-relaxed" data-i18n="s4.desc">
+              Reechilibrarea apexului, remodelare, scurtare și reîmprospătarea completă a culorii și luciului.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-neutral-400">
+            <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-peony"></i> 80 min</span>
+            <a href="#booking" class="text-peony hover:text-white font-bold uppercase tracking-wider flex items-center gap-1" data-i18n="services.select">Alege <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- Serviciul 5 -->
+        <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-gold/50 transition-all group relative flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs uppercase tracking-widest text-gold font-bold">Event Exclusive</span>
+              <span class="font-headline text-2xl font-black text-white">€145</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-white group-hover:text-gold transition-colors" data-i18n="s5.title">
+              Set Bridal & Eveniment Special
+            </h3>
+            <p class="text-xs text-neutral-400 mt-2 leading-relaxed" data-i18n="s5.desc">
+              Consiliere privată, mostre personalizate, cristale Swarovski autentice și perle organice încapsulate.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-neutral-400">
+            <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-gold"></i> 160 min</span>
+            <a href="#booking" class="text-gold hover:text-white font-bold uppercase tracking-wider flex items-center gap-1" data-i18n="services.select">Alege <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- Serviciul 6 -->
+        <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-peony/50 transition-all group relative flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs uppercase tracking-widest text-gold font-bold">Add-on Art</span>
+              <span class="font-headline text-2xl font-black text-white">€5-€15</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-white group-hover:text-peony transition-colors" data-i18n="s6.title">
+              Accesorii Piercing & Lanțuri Aurii
+            </h3>
+            <p class="text-xs text-neutral-400 mt-2 leading-relaxed" data-i18n="s6.desc">
+              Perforare sigură a marginii unghiei, aplicare de inele fine aurii sau elemente gotice tactile.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-neutral-400">
+            <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-peony"></i> +20 min</span>
+            <a href="#booking" class="text-peony hover:text-white font-bold uppercase tracking-wider flex items-center gap-1" data-i18n="services.select">Alege <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECȚIUNEA 5: FORMULAR DE PROGRAMARE (FĂRĂ EMAIL - DIRECT PRIN TELEFON / WHATSAPP) -->
+  <section id="booking" class="py-24 relative bg-dark-950 border-b border-white/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-14">
+        <span class="text-peony text-xs font-headline uppercase tracking-[0.25em] font-bold" data-i18n="book.tag">
+          REZERVĂRI DIRECTE
+        </span>
+        <h2 class="font-headline text-3xl sm:text-5xl font-black uppercase text-white tracking-tight mt-2" data-i18n="book.title">
+          REZERVĂ-ȚI LOCUL
+        </h2>
+        <p class="text-neutral-400 text-sm mt-3" data-i18n="book.sub">
+          Sesiuni exclusive 1-la-1 în Braunau am Inn. Confirmare rapidă pe WhatsApp sau prin apel.
+        </p>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-white/10 relative overflow-hidden shadow-2xl">
+        <form id="booking-form" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Nume -->
+            <div>
+              <label for="client-name" class="block text-xs uppercase tracking-wider text-neutral-300 font-semibold mb-2" data-i18n="form.name">
+                Nume & Prenume *
+              </label>
+              <input 
+                type="text" 
+                id="client-name" 
+                required 
+                placeholder="Ex. Sandra Weber"
+                class="w-full bg-dark-850 border border-white/10 focus:border-peony rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors"
+              />
+            </div>
+
+            <!-- Telefon / WhatsApp -->
+            <div>
+              <label for="client-phone" class="block text-xs uppercase tracking-wider text-neutral-300 font-semibold mb-2" data-i18n="form.phone">
+                Telefon / WhatsApp *
+              </label>
+              <input 
+                type="tel" 
+                id="client-phone" 
+                required 
+                placeholder="+43 676 ..." 
+                class="w-full bg-dark-850 border border-white/10 focus:border-peony rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors"
+              />
+            </div>
+
+            <!-- Serviciu -->
+            <div>
+              <label for="service-select" class="block text-xs uppercase tracking-wider text-neutral-300 font-semibold mb-2" data-i18n="form.service">
+                Serviciu Dorit *
+              </label>
+              <select id="service-select" required class="w-full bg-dark-850 border border-white/10 focus:border-peony rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors">
+                <option value="3d-sculpture">3D Liquid Gold & Sculptură Florală (€115)</option>
+                <option value="gel-arch">Construcție Gel Arhitectural (€75)</option>
+                <option value="chrome-noir">Liquid Mirror Chrome & Negative Space (€85)</option>
+                <option value="refill">Întreținere Arhitectură Gel (€55)</option>
+                <option value="bridal">Set Bridal & Eveniment Special (€145)</option>
+              </select>
+            </div>
+
+            <!-- Data Preferată -->
+            <div>
+              <label for="date-select" class="block text-xs uppercase tracking-wider text-neutral-300 font-semibold mb-2" data-i18n="form.date">
+                Data Dorită *
+              </label>
+              <input 
+                type="date" 
+                id="date-select" 
+                required 
+                class="w-full bg-dark-850 border border-white/10 focus:border-peony rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors"
+              />
+            </div>
+
+          </div>
+
+          <!-- Interval orar -->
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-neutral-300 font-semibold mb-2" data-i18n="form.time">
+              Interval Orar Preferat
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <button type="button" class="time-slot px-3 py-2 rounded-xl bg-dark-850 border border-white/10 text-xs font-semibold text-neutral-300 hover:border-peony hover:text-white transition-all text-center">Dimineața (09:30 - 12:00)</button>
+              <button type="button" class="time-slot px-3 py-2 rounded-xl bg-peony text-white border border-peony text-xs font-semibold transition-all text-center">Prânz (12:00 - 14:30)</button>
+              <button type="button" class="time-slot px-3 py-2 rounded-xl bg-dark-850 border border-white/10 text-xs font-semibold text-neutral-300 hover:border-peony hover:text-white transition-all text-center">După-amiază (15:00 - 17:30)</button>
+              <button type="button" class="time-slot px-3 py-2 rounded-xl bg-dark-850 border border-white/10 text-xs font-semibold text-neutral-300 hover:border-peony hover:text-white transition-all text-center">Seara (17:30 - 20:00)</button>
+            </div>
+          </div>
+
+          <!-- Notițe / Preferințe model -->
+          <div>
+            <label for="client-notes" class="block text-xs uppercase tracking-wider text-neutral-300 font-semibold mb-2" data-i18n="form.notes">
+              Idei de model sau cerințe speciale (Opțional)
+            </label>
+            <textarea 
+              id="client-notes" 
+              rows="3" 
+              placeholder="Ex: Formă stiletto lungă, detalii aurii reliefate..." 
+              class="w-full bg-dark-850 border border-white/10 focus:border-peony rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors"
+            ></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button 
+              type="submit" 
+              class="w-full py-4 rounded-full bg-peony hover:bg-peony-glow text-white font-headline text-sm font-black uppercase tracking-[0.2em] shadow-[0_0_30px_rgba(255,46,147,0.45)] hover:shadow-[0_0_40px_rgba(255,46,147,0.7)] transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span data-i18n="form.submit">TRIMITE PROGRAMAREA</span>
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+            </button>
+            <p class="text-center text-[11px] text-neutral-500 mt-3" data-i18n="form.guarantee">
+              Programare flexibilă. Vei fi contactată pe WhatsApp sau telefon pentru confirmare.
+            </p>
+          </div>
+        </form>
+
+        <!-- Mesaj de succes după trimitere -->
+        <div id="booking-success" class="hidden absolute inset-0 bg-dark-950/95 backdrop-blur-xl p-8 flex flex-col items-center justify-center text-center z-30">
+          <div class="w-16 h-16 rounded-full bg-peony/20 border border-peony flex items-center justify-center text-peony mb-4 animate-bounce">
+            <i data-lucide="sparkles" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-headline text-3xl font-bold text-white mb-2" data-i18n="success.title">
+            Programare Trimisă cu Succes!
+          </h3>
+          <p class="text-neutral-300 text-sm max-w-md mb-6 leading-relaxed" data-i18n="success.msg">
+            Diana te va contacta în scurt timp pe WhatsApp sau prin apel pentru a stabili ora exactă.
+          </p>
+          <button id="btn-reset-booking" class="px-6 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs uppercase font-bold tracking-wider transition-colors cursor-pointer">
+            Fă o altă solicitare
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECȚIUNEA 6: LOCAȚIE & CONTACT (PROGRAM FLEXIBIL, FĂRĂ EMAIL) -->
+  <section id="contact" class="py-20 relative bg-dark-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 space-y-6">
+          <div>
+            <span class="text-gold text-xs font-headline uppercase tracking-[0.25em] font-bold" data-i18n="loc.tag">
+              LOCAȚIE EXCLUSIVISTĂ
+            </span>
+            <h2 class="font-headline text-3xl sm:text-4xl font-black uppercase text-white mt-1" data-i18n="loc.title">
+              BRAUNAU AM INN, AUSTRIA
+            </h2>
+            <p class="text-neutral-400 text-sm mt-2" data-i18n="loc.desc">
+              Situat în centrul istoric din Braunau am Inn. Un spațiu intim conceput pentru confort deplin, relaxare și artă pe unghii.
+            </p>
+          </div>
+
+          <div class="space-y-4 pt-2">
+            <!-- Adresă -->
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-dark-850 border border-white/5">
+              <div class="w-10 h-10 rounded-xl bg-peony/10 border border-peony/30 flex items-center justify-center text-peony flex-shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-neutral-400 font-bold block" data-i18n="loc.address_title">Adresă Atelier</span>
+                <span class="text-white text-sm font-semibold">Stadtplatz 18, 5280 Braunau am Inn, Austria</span>
+                <span class="block text-[11px] text-neutral-500 mt-0.5">Parcare facilă disponibilă în zonă</span>
+              </div>
+            </div>
+
+            <!-- Program de lucru flexibil -->
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-dark-850 border border-white/5">
+              <div class="w-10 h-10 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold flex-shrink-0">
+                <i data-lucide="calendar-clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-neutral-400 font-bold block" data-i18n="loc.hours_title">Program de Lucru</span>
+                <span class="text-white text-sm font-semibold" data-i18n="loc.hours_val">Flexibil / Exclusiv pe bază de programare</span>
+                <span class="block text-[11px] text-peony font-medium mt-0.5">Sesiuni adaptate după disponibilitatea ta</span>
+              </div>
+            </div>
+
+            <!-- Contact direct Telefon / WhatsApp (fără email) -->
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-dark-850 border border-white/5">
+              <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center text-white flex-shrink-0">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-neutral-400 font-bold block" data-i18n="loc.contact_title">Contact Direct (Telefon & WhatsApp)</span>
+                <a href="tel:+436766829685" class="text-white hover:text-peony text-base font-bold transition-colors block mt-0.5">+43 676 682 9685</a>
+                <a href="https://wa.me/436766829685" target="_blank" class="inline-flex items-center gap-1 text-xs text-green-400 hover:underline mt-1">
+                  <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Scrie direct pe WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Previzualizare Atmosferă & Hartă -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-3xl overflow-hidden border border-white/10 glass-panel p-2 shadow-2xl">
+            <div class="relative h-[380px] rounded-2xl overflow-hidden bg-dark-800">
+              <img 
+                id="location-interior-img"
+                src="banner.jpg" 
+                alt="Interior Atelier Rosé Garden Braunau" 
+                class="w-full h-full object-cover filter contrast-110 brightness-90"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                <div>
+                  <span class="text-peony font-headline text-lg font-bold block">ROSÉ GARDEN ATELIER</span>
+                  <span class="text-xs text-neutral-300">Braunau am Inn Historic Center</span>
+                </div>
+                <a 
+                  href="https://maps.google.com/?q=Stadtplatz+18,+Braunau+am+Inn" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="px-4 py-2 rounded-xl bg-white text-dark-950 text-xs font-bold uppercase tracking-wider hover:bg-peony hover:text-white transition-colors flex items-center gap-1.5 shadow-lg"
+                >
+                  <span data-i18n="loc.directions">Google Maps</span>
+                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark-950 border-t border-white/10 py-12 text-neutral-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/5">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full border border-peony flex items-center justify-center text-peony font-bold text-[10px]">
+            RG
+          </div>
+          <span class="font-headline font-black tracking-widest text-white text-base">ROSÉ GARDEN</span>
+        </div>
+
+        <div class="flex items-center gap-6 text-sm">
+          <a href="tel:+436766829685" class="hover:text-peony transition-colors flex items-center gap-1.5"><i data-lucide="phone" class="w-4 h-4"></i> +43 676 682 9685</a>
+          <a href="https://wa.me/436766829685" target="_blank" class="hover:text-peony transition-colors flex items-center gap-1.5"><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
+          <a href="#" class="hover:text-peony transition-colors flex items-center gap-1.5"><i data-lucide="instagram" class="w-4 h-4"></i> Instagram</a>
+        </div>
+
+        <div class="flex items-center gap-4 text-[11px]">
+          <a href="#" class="hover:underline">Impressum</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:underline">Datenschutz</a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-neutral-500 text-[11px]">
+        <p>&copy; <span id="year"></span> Rosé Garden Atelier — Braunau am Inn. Toate drepturile rezervate.</p>
+        <p class="text-gold/80 font-medium">"Fără Reguli. Doar Arhitectură Pură."</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================================= -->
+  <!-- POPUP / MODAL DESIGN PERSONALIZAT (+43 676 682 9685)              -->
+  <!-- ================================================================= -->
+  <div id="custom-design-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-dark-950/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 p-4">
+    <div class="relative w-full max-w-md bg-dark-900 border border-gold/40 rounded-3xl p-6 sm:p-8 shadow-[0_0_50px_rgba(229,192,123,0.2)] transform scale-95 transition-transform duration-300" id="modal-content">
+      
+      <!-- Buton Închidere -->
+      <button id="btn-close-modal" aria-label="Închide" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/5 border border-white/10 text-neutral-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center text-gold">
+          <i data-lucide="sparkles" class="w-7 h-7"></i>
+        </div>
+
+        <span class="text-peony text-[11px] font-headline uppercase tracking-[0.25em] font-bold">Consultanță & Model Custom</span>
+        <h3 class="font-headline text-2xl font-black text-white mt-1">Design Personalizat</h3>
+        
+        <p class="text-neutral-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Ai o fotografie de referință sau o idee specială? Contacteaz-o direct pe Diana pentru detalii, durată și preț:
+        </p>
+
+        <!-- Numărul evidențiat cu stil lux -->
+        <div class="my-5 p-4 rounded-2xl bg-dark-850 border border-gold/30">
+          <span class="text-[10px] uppercase tracking-widest text-neutral-400 block font-semibold">Apelează sau trimite mesaj:</span>
+          <a href="tel:+436766829685" class="font-headline text-2xl sm:text-3xl font-black text-gold hover:text-gold-light tracking-wide block mt-1 transition-colors">
+            +43 676 682 9685
+          </a>
+        </div>
+
+        <!-- Butoane rapide de acțiune -->
+        <div class="grid grid-cols-2 gap-3">
+          <a href="tel:+436766829685" class="py-3 px-4 rounded-xl bg-gold hover:bg-gold-light text-dark-950 font-headline text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+            <i data-lucide="phone-call" class="w-4 h-4"></i> Sună Acum
+          </a>
+          <a href="https://wa.me/436766829685?text=Buna%20Diana,%20as%20dori%20un%20design%20personalizat%20la%20Rose%20Garden" target="_blank" class="py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-headline text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- JAVASCRIPT: CONFIGURAȚIE CĂI, POPUP & FUNCȚIONALITĂȚI             -->
+  <!-- ================================================================= -->
+  <script>
+    // =================================================================
+    // ⚙️ CONFIGURAȚIE CĂI FIȘIERE (C:\Users\robi013\Desktop\diana)
+    // =================================================================
+    const SITE_CONFIG = {
+      // 1. Detalii Artist
+      artist: {
+        name: "DIANA",
+        // Fișierul tău din folder: C:\Users\robi013\Desktop\diana\artistportrait.jpg
+        portraitPath: "artistportrait.jpg",
+        craftThumb1: "./lookbook-1.jpg",
+        craftThumb2: "./lookbook-2.jpg",
+        roleRo: "Specialistă în redefinirea formei, sculptură 3D & micropictură",
+        roleDe: "Spezialistin für Formredefinition, 3D-Skulptur & Mikromalerei",
+        quoteRo: '"O unghie nu este un canvas plat, este o structură arhitecturală ce necesită echilibru perfect între rezistență și grație. Fără șabloane monotone — fiecare set spune o poveste unică."',
+        quoteDe: '"Ein Nagel ist keine flache Leinwand, sondern eine architektonische Struktur, die perfekte Balance zwischen Festigkeit und Anmut verlangt. Keine Schablonen von der Stange — jedes Set erzählt eine Geschichte."'
+      },
+
+      // 2. Imagini Principale
+      images: {
+        // Fișierul tău din folder: C:\Users\robi013\Desktop\diana\banner.jpg
+        atelierBanner: "banner.jpg",
+        
+        // Imaginea mare de fundal din prima secțiune
+        hero: "./hero-nail-art.jpg",
+
+        // Lookbook
+        lookbook1: "./lookbook-1.jpg",
+        lookbook2: "./lookbook-2.jpg",
+        lookbook3: "./lookbook-3.jpg",
+        lookbook4: "./lookbook-4.jpg"
+      },
+
+      // Rezerve web de înaltă rezoluție (dacă un fișier lipsește temporar)
+      fallbacks: {
+        artistPortrait: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
+        atelierBanner: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=1200&auto=format&fit=crop",
+        hero: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1920&auto=format&fit=crop",
+        lookbook1: "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=900&auto=format&fit=crop",
+        lookbook2: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=900&auto=format&fit=crop",
+        lookbook3: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=900&auto=format&fit=crop",
+        lookbook4: "https://images.unsplash.com/photo-1583001809873-a128495da465?q=80&w=900&auto=format&fit=crop"
+      }
+    };
+
+    // Încărcător de imagini cu protecție la eroare
+    function bindImage(elementId, localPath, fallbackUrl) {
+      const img = document.getElementById(elementId);
+      if (!img) return;
+
+      img.onerror = function() {
+        img.onerror = null;
+        img.src = fallbackUrl;
+      };
+      img.src = localPath;
+    }
+
+    function initImages() {
+      // Portretul artistei
+      bindImage('artist-portrait-img', SITE_CONFIG.artist.portraitPath, SITE_CONFIG.fallbacks.artistPortrait);
+      // Bannerul atelierului (banner.jpg)
+      bindImage('atelier-banner-img', SITE_CONFIG.images.atelierBanner, SITE_CONFIG.fallbacks.atelierBanner);
+      bindImage('location-interior-img', SITE_CONFIG.images.atelierBanner, SITE_CONFIG.fallbacks.atelierBanner);
+
+      // Hero & Lookbook
+      bindImage('hero-img', SITE_CONFIG.images.hero, SITE_CONFIG.fallbacks.hero);
+      bindImage('lb-img-1', SITE_CONFIG.images.lookbook1, SITE_CONFIG.fallbacks.lookbook1);
+      bindImage('lb-img-2', SITE_CONFIG.images.lookbook2, SITE_CONFIG.fallbacks.lookbook2);
+      bindImage('lb-img-3', SITE_CONFIG.images.lookbook3, SITE_CONFIG.fallbacks.lookbook3);
+      bindImage('lb-img-4', SITE_CONFIG.images.lookbook4, SITE_CONFIG.fallbacks.lookbook4);
+      bindImage('artist-thumb-1', SITE_CONFIG.artist.craftThumb1, SITE_CONFIG.fallbacks.lookbook1);
+      bindImage('artist-thumb-2', SITE_CONFIG.artist.craftThumb2, SITE_CONFIG.fallbacks.lookbook2);
+
+      // Numele artistei
+      document.querySelectorAll('.artist-display-name').forEach(el => {
+        el.textContent = SITE_CONFIG.artist.name;
+      });
+    }
+
+    initImages();
+    document.getElementById('year').textContent = new Date().getFullYear();
+    lucide.createIcons();
+
+    // =================================================================
+    // LOGICĂ POPUP / MODAL „CERE DESIGN PERSONALIZAT”
+    // =================================================================
+    const customDesignBtn = document.getElementById('btn-custom-design');
+    const modal = document.getElementById('custom-design-modal');
+    const modalContent = document.getElementById('modal-content');
+    const closeModalBtn = document.getElementById('btn-close-modal');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+      }, 10);
+    }
+
+    function closeModal() {
+      modal.classList.add('opacity-0');
+      modalContent.classList.remove('scale-100');
+      modalContent.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    }
+
+    if (customDesignBtn) {
+      customDesignBtn.addEventListener('click', openModal);
+    }
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener('click', closeModal);
+    }
+    // Închide la click pe fundal
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // =================================================================
+    // TRADUCERI RO / DE (ROMÂNĂ NATURALĂ + GERMANĂ)
+    // =================================================================
+    const translations = {
+      ro: {
+        "announcement": "Braunau am Inn, Austria • Atelier Privat & Sculptură Gel High-End",
+        "nav.lookbook": "Lookbook",
+        "nav.artist": "Maestra Detaliului",
+        "nav.services": "Servicii & Tarife",
+        "nav.philosophy": "Atelierul Nostru",
+        "nav.location": "Locație Braunau",
+        "nav.book": "Programează-te",
+        "hero.tagline": "ARTĂ PE UNGHIILE TALE.",
+        "hero.title": "FĂRĂ REGULI.",
+        "hero.subtext": "Sculptură în gel, aur lichid, detalii 3D. Descoperă manichiura ta statement în Braunau am Inn.",
+        "hero.cta": "PROGRAMEAZĂ-TE ACUM",
+        "hero.explore": "Explorează Lookbook-ul",
+        "hero.stat1": "Sculptat Manual",
+        "hero.stat2": "Chrome & Aur",
+        "hero.stat3": "Săptămâni Rezistență",
+        "lookbook.title": "THE LOOKBOOK",
+        "lookbook.subtitle": "Perfecțiune macro. Explorează fiecare detaliu.",
+        "lookbook.swipe": "GLISEAZĂ PENTRU DETALII",
+        "filter.all": "Toate Creațiile",
+        "filter.3d": "3D Botanical",
+        "filter.chrome": "Liquid Metal Chrome",
+        "filter.stiletto": "Stiletto Architecture",
+        "card1.title": "3D Botanical Sculpting",
+        "card2.title": "Liquid Metal Flora",
+        "card3.title": "Molten Gothic Baroque",
+        "card4.title": "Onyx & Cyber Minimal",
+        "lookbook.custom_quote": "Personalizează-ți Viziunea",
+        "lookbook.custom_desc": "Fiecare set este sculptat exclusiv manual. Vorbește direct cu Diana despre modelul tău de vis.",
+        "lookbook.custom_btn": "Cere Design Personalizat",
+        "artist.title": "MAESTRA DETALIULUI",
+        "artist.subtitle": "Sculptoriță de unghii, nu simplă manichiuristă.",
+        "artist.badge_atelier": "Atelier Exclusiv Braunau am Inn",
+        "artist.role": SITE_CONFIG.artist.roleRo,
+        "artist.quote": SITE_CONFIG.artist.quoteRo,
+        "artist.story": "Fiecare set creat în atelierul Rosé Garden este rezultatul anilor de pasiune și perfecționare în tehnici avansate. De la apex milimetric la pictură manuală fină și accente de aur lichid, fiecare întâlnire este o experiență 100% individualizată.",
+        "artist.stat_exp": "Ani de Măiestrie",
+        "artist.stat_sets": "Seturi Realizate",
+        "artist.stat_solo": "Sesiuni Private 1-la-1",
+        "artist.precision_stat": "Micro-Detalii 0.05mm",
+        "artist.precision_sub": "Pigmenți Japonezi & 24K",
+        "artist.btn_book": `Programează o Sesiune`,
+        "artist.btn_portfolio": "Vezi Modelele",
+        "craft.eyebrow": "FILOSOFIA ATELIERULUI BRAUNAU",
+        "craft.title": "Niciun șablon industrial. Fiecare linie este sculptură pură.",
+        "craft.body": "Folosim pigmenți organici japonezi, cristale autentice, foiță fină de aur și geluri polimerice de înaltă rezistență. În atelierul nostru din Braunau am Inn, timpul este dedicat exclusiv ție, pentru manichiuri ce rezistă impecabil săptămâni întregi.",
+        "craft.feat1": "Sterilizare Medicală Clasa B",
+        "craft.feat2": "Gel Hipoalergenic Certificat UE",
+        "craft.feat3": "Garanție de Structură 21 Zile",
+        "services.tag": "MENIU SERVICII & INVESTIȚIE",
+        "services.title": "ARHITECTURĂ & DESIGN",
+        "services.sub": "Transparență totală. Fiecare serviciu include curățare dry manicure de mare precizie și top coat anti-zgârieturi.",
+        "services.select": "Alege",
+        "s1.title": "Construcție Gel Arhitectural",
+        "s1.desc": "Prelungire pe șablon, apex milimetric și rezistență maximă. Include forma dorită (Stiletto, Coffin, Almond rusesc).",
+        "s2.title": "3D Liquid Gold & Sculptură Florală",
+        "s2.desc": "Semnătura Rosé Garden: petale reliefate lucrate manual, picături de aur lichid și reflexii cromatice spectaculoase.",
+        "s3.title": "Liquid Mirror Chrome & Negative Space",
+        "s3.desc": "Oglindă lichidă argintie sau aurie pe bază mată, detalii geometrice precise și micropictură fină.",
+        "s4.title": "Întreținere Arhitectură Gel",
+        "s4.desc": "Reechilibrarea apexului, remodelare, scurtare și reîmprospătarea completă a culorii și luciului.",
+        "s5.title": "Set Bridal & Eveniment Special",
+        "s5.desc": "Consiliere privată, mostre personalizate, cristale Swarovski autentice și perle organice încapsulate.",
+        "s6.title": "Accesorii Piercing & Lanțuri Aurii",
+        "s6.desc": "Perforare sigură a marginii unghiei, aplicare de inele fine aurii sau elemente gotice tactile.",
+        "book.tag": "REZERVĂRI DIRECTE",
+        "book.title": "REZERVĂ-ȚI LOCUL",
+        "book.sub": "Sesiuni exclusive 1-la-1 în Braunau am Inn. Confirmare rapidă pe WhatsApp sau prin apel.",
+        "form.name": "Nume & Prenume *",
+        "form.phone": "Telefon / WhatsApp *",
+        "form.service": "Serviciu Dorit *",
+        "form.date": "Data Dorită *",
+        "form.time": "Interval Orar Preferat",
+        "form.notes": "Idei de model sau cerințe speciale (Opțional)",
+        "form.submit": "TRIMITE PROGRAMAREA",
+        "form.guarantee": "Programare flexibilă. Vei fi contactată pe WhatsApp sau telefon pentru confirmare.",
+        "success.title": "Programare Trimisă cu Succes!",
+        "success.msg": "Diana te va contacta în scurt timp pe WhatsApp sau prin apel pentru a stabili ora exactă.",
+        "loc.tag": "LOCAȚIE EXCLUSIVISTĂ",
+        "loc.title": "BRAUNAU AM INN, AUSTRIA",
+        "loc.desc": "Situat în centrul istoric din Braunau am Inn. Un spațiu intim conceput pentru confort deplin, relaxare și artă pe unghii.",
+        "loc.address_title": "Adresă Atelier",
+        "loc.hours_title": "Program de Lucru",
+        "loc.hours_val": "Flexibil / Exclusiv pe bază de programare",
+        "loc.contact_title": "Contact Direct (Telefon & WhatsApp)",
+        "loc.directions": "Google Maps"
+      },
+      de: {
+        "announcement": "Braunau am Inn, Österreich • Privates Nagelatelier & Gel-Skulptur",
+        "nav.lookbook": "Lookbook",
+        "nav.artist": "Meisterin des Details",
+        "nav.services": "Leistungen & Preise",
+        "nav.philosophy": "Unser Atelier",
+        "nav.location": "Standort Braunau",
+        "nav.book": "Termin buchen",
+        "hero.tagline": "KUNST AUF DEINEN NÄGELN.",
+        "hero.title": "KEINE REGELN.",
+        "hero.subtext": "Gel-Skulptur, flüssiges Gold, 3D-Details. Entdecke deine Statement-Maniküre in Braunau am Inn.",
+        "hero.cta": "JETZT TERMIN VEREINBAREN",
+        "hero.explore": "Lookbook Entdecken",
+        "hero.stat1": "Handgefertigt",
+        "hero.stat2": "Chrome & Gold",
+        "hero.stat3": "Wochen Haltbarkeit",
+        "lookbook.title": "THE LOOKBOOK",
+        "lookbook.subtitle": "Makro-Perfektion. Entdecke jedes Detail.",
+        "lookbook.swipe": "WISCHEN ZUM ENTDECKEN",
+        "filter.all": "Alle Kreationen",
+        "filter.3d": "3D Botanik",
+        "filter.chrome": "Flüssiges Chrom",
+        "filter.stiletto": "Stiletto Architektur",
+        "card1.title": "3D Botanical Sculpting",
+        "card2.title": "Liquid Metal Flora",
+        "card3.title": "Geschmolzener Barock",
+        "card4.title": "Onyx & Cyber Minimal",
+        "lookbook.custom_quote": "Individualisiere deine Vision",
+        "lookbook.custom_desc": "Jedes Set wird exklusiv von Hand modelliert. Sprich direkt mit Diana über dein Wunschdesign.",
+        "lookbook.custom_btn": "Individuelles Design Anfragen",
+        "artist.title": "MEISTERIN DES DETAILS",
+        "artist.subtitle": "Nagel-Bildhauerin, nicht bloß Maniküre.",
+        "artist.badge_atelier": "Exklusives Atelier Braunau am Inn",
+        "artist.role": SITE_CONFIG.artist.roleDe,
+        "artist.quote": SITE_CONFIG.artist.quoteDe,
+        "artist.story": "Jedes Set im Rosé Garden Atelier ist das Ergebnis jahrelanger Leidenschaft und meisterhafter Technik. Vom millimetergenauen Aufbau bis zu flüssigem Gold ist jeder Termin ein 100% individuelles Erlebnis.",
+        "artist.stat_exp": "Jahre Erfahrung",
+        "artist.stat_sets": "Kreierte Sets",
+        "artist.stat_solo": "Private 1-zu-1 Termine",
+        "artist.precision_stat": "Mikro-Details 0.05mm",
+        "artist.precision_sub": "Japanische Pigmente & 24K",
+        "artist.btn_book": `Termin vereinbaren`,
+        "artist.btn_portfolio": "Lookbook ansehen",
+        "craft.eyebrow": "DIE PHILOSOPHIE DES ATELIERS IN BRAUNAU",
+        "craft.title": "Keine Schablonen von der Stange. Jede Kurve ist reine Skulptur.",
+        "craft.body": "Wir verwenden organische japanische Pigmente, echte Kristalle, feinstes Blattgold und extrem widerstandsfähige Gele. In Braunau am Inn widmen wir uns ganz dir für Ergebnisse, die wochenlang perfekt halten.",
+        "craft.feat1": "Medizinische Sterilisation Klasse B",
+        "craft.feat2": "EU-Zertifiziertes Gel",
+        "craft.feat3": "21 Tage Strukturgarantie",
+        "services.tag": "LEISTUNGEN & PREISE",
+        "services.title": "ARCHITEKTUR & DESIGN",
+        "services.sub": "Volle Transparenz. Jede Behandlung beinhaltet hochpräzise Dry Manicure und kratzfesten Versiegler.",
+        "services.select": "Auswählen",
+        "s1.title": "Architektonischer Gel-Aufbau",
+        "s1.desc": "Schablonenverlängerung, millimetergenauer Apex, maximale Haltbarkeit. Form nach Wahl (Stiletto, Coffin, Almond).",
+        "s2.title": "3D Liquid Gold & Floral Sculpture",
+        "s2.desc": "Signatur von Rosé Garden: handgefertigte 3D-Reliefblüten, Tropfen aus flüssigem Gold und Chromglanz.",
+        "s3.title": "Liquid Mirror Chrome & Negative Space",
+        "s3.desc": "Flüssiger Spiegeleffekt in Gold oder Silber auf matter Basis mit feinsten geometrischen Linien.",
+        "s4.title": "Refill & Re-Architektur",
+        "s4.desc": "Apex-Ausgleich, Neu-Ausrichtung, Kürzen und Auffrischen der gesamten Farbbrillanz.",
+        "s5.title": "Bridal & Red Carpet Stiletto Set",
+        "s5.desc": "Persönliche Vorbesprechung, Test-Design, originale Swarovski-Kristalle und Zuchtperlen.",
+        "s6.title": "3D Piercing & Goldkettchen",
+        "s6.desc": "Sicheres Perforieren der Spitze für Goldringe, Gothic-Anhänger und taktile Effekte.",
+        "book.tag": "DIREKTE RESERVIERUNG",
+        "book.title": "SICHERE DIR DEINEN TERMIN",
+        "book.sub": "Exklusive 1-zu-1 Termine in Braunau am Inn. Schnelle Bestätigung via WhatsApp oder Telefon.",
+        "form.name": "Vor- & Nachname *",
+        "form.phone": "Telefon / WhatsApp *",
+        "form.service": "Gewünschte Behandlung *",
+        "form.date": "Wunschtermin *",
+        "form.time": "Bevorzugtes Zeitfenster",
+        "form.notes": "Designideen oder Wünsche (Optional)",
+        "form.submit": "ANFRAGE ABSCHICKEN",
+        "form.guarantee": "Flexible Buchung. Du wirst via WhatsApp oder Anruf kontaktiert.",
+        "success.title": "Anfrage Erfolgreich Versendet!",
+        "success.msg": "Diana meldet sich in Kürze via WhatsApp oder Anruf bei dir, um den genauen Slot festzulegen.",
+        "loc.tag": "EXKLUSIVER STANDORT",
+        "loc.title": "BRAUNAU AM INN, ÖSTERREICH",
+        "loc.desc": "Mitten im historischen Herzen von Braunau. Ein intimer Ort für anspruchsvolles Design und Entspannung.",
+        "loc.address_title": "Adresse Atelier",
+        "loc.hours_title": "Öffnungszeiten",
+        "loc.hours_val": "Flexibel / Nur nach vorheriger Terminvereinbarung",
+        "loc.contact_title": "Direktkontakt (Telefon & WhatsApp)",
+        "loc.directions": "Google Maps"
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+
+      const roBtn = document.getElementById('lang-ro');
+      const deBtn = document.getElementById('lang-de');
+
+      if (lang === 'ro') {
+        roBtn.classList.add('bg-peony', 'text-white');
+        roBtn.classList.remove('text-neutral-400');
+        deBtn.classList.remove('bg-peony', 'text-white');
+        deBtn.classList.add('text-neutral-400');
+        document.documentElement.lang = 'ro';
+      } else {
+        deBtn.classList.add('bg-peony', 'text-white');
+        deBtn.classList.remove('text-neutral-400');
+        roBtn.classList.remove('bg-peony', 'text-white');
+        roBtn.classList.add('text-neutral-400');
+        document.documentElement.lang = 'de';
+      }
+    }
+
+    document.getElementById('lang-ro').addEventListener('click', () => setLanguage('ro'));
+    document.getElementById('lang-de').addEventListener('click', () => setLanguage('de'));
+
+    // Meniu mobil
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Carousel Lookbook
+    const carousel = document.getElementById('lookbook-carousel');
+    document.getElementById('lb-prev').addEventListener('click', () => {
+      carousel.scrollBy({ left: -340, behavior: 'smooth' });
+    });
+    document.getElementById('lb-next').addEventListener('click', () => {
+      carousel.scrollBy({ left: 340, behavior: 'smooth' });
+    });
+
+    // Filtre Lookbook
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.lookbook-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-peony', 'text-white');
+          b.classList.add('bg-dark-800', 'text-neutral-300');
+        });
+        btn.classList.add('bg-peony', 'text-white');
+        btn.classList.remove('bg-dark-800', 'text-neutral-300');
+
+        const cat = btn.getAttribute('data-filter');
+        cards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Butoane orare formular
+    const timeSlots = document.querySelectorAll('.time-slot');
+    timeSlots.forEach(slot => {
+      slot.addEventListener('click', () => {
+        timeSlots.forEach(s => {
+          s.classList.remove('bg-peony', 'text-white', 'border-peony');
+          s.classList.add('bg-dark-850', 'text-neutral-300', 'border-white/10');
+        });
+        slot.classList.add('bg-peony', 'text-white', 'border-peony');
+        slot.classList.remove('bg-dark-850', 'text-neutral-300', 'border-white/10');
+      });
+    });
+
+    // Setare dată implicită pe mâine
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const dateInput = document.getElementById('date-select');
+    if (dateInput) {
+      dateInput.value = tomorrow.toISOString().split('T')[0];
+      dateInput.min = new Date().toISOString().split('T')[0];
+    }
+
+    // Trimitere Formular
+    const bookingForm = document.getElementById('booking-form');
+    const bookingSuccess = document.getElementById('booking-success');
+    const btnReset = document.getElementById('btn-reset-booking');
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = bookingForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = `<span>Se trimite...</span>`;
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        bookingSuccess.classList.remove('hidden');
+        lucide.createIcons();
+      }, 700);
+    });
+
+    btnReset.addEventListener('click', () => {
+      bookingSuccess.classList.add('hidden');
+      bookingForm.reset();
+      if (dateInput) {
+        dateInput.value = tomorrow.toISOString().split('T')[0];
+      }
+    });
+
+    // Scroll fin la selectare serviciu
+    document.querySelectorAll('[href="#booking"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById('booking');
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
